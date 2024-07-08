@@ -42,6 +42,8 @@ text_instruction = font_instruction.render('Press A to select',True,(0,0,0))
 textInstruction_rect = text_instruction.get_rect()
 textInstruction_rect.center = (SCREEN_WIDTH/2,((SCREEN_HEIGHT/2)+ 50))
 
+menutext_instruction = font_instruction.render('Press A to select',True,(255,255,255))
+
 option_gameOver = ['Retry','Quit']
 currOption_list = []
 
@@ -253,7 +255,7 @@ def menuRender(idx,op_idx):
         screen.blit(main_Title,mainTitle_rect)
         optionRender(option_mainMenu,op_idx,(255,255,255))
         currOption_list = option_mainMenu
-        screen.blit(text_instruction,textInstruction_rect)
+        screen.blit(menutext_instruction,textInstruction_rect)
 
 def playSound(channel: int):
     """Play the sfx on the corresponding channel and with a set/ fixed volume
